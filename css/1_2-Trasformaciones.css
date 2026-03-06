@@ -1,0 +1,124 @@
+/*María Fernández Gilarte*/
+.enlace:hover {
+    /*Transición actividad 1.1. el fondo del enlace cambia de color en un tramo de 3 segundos.*/
+    background-color: rgba(247, 23, 53, 0.503);
+    
+    transition: all, 3s;
+}
+.enlace{
+    color: black;
+    background-color: #5779d85d;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+/*Oculto los textos para que no aparezcan*/
+.texto_escalado, .texto_desplazamiento,.texto_rotacion{
+    display: none;
+}
+/*Barra para el texto, fondo negro, letra blanca, padding para que el 
+texto cuando salga no quede pegado al borde y altura minima para que aunque no salga el texto aparezca */
+.zona_texto {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    min-height: 30px;
+}
+
+.diagrama {
+    flex: 1; /*Ocupa todo el espacio disponible de su contenedor*/
+    display: flex; /*Activo FLEX (se ponen en fila los hijos)*/
+    align-items: flex-end; /*Alinea las barras al fondo*/
+    justify-content: center; /*Centra las barras horizontalmente*/ 
+    gap: 5px;  
+}
+
+.barra_grupo{    
+    height: 100%; /*Altura total del contenedor de las barras*/
+    display: flex;
+    flex-direction: column;/*Pone el % encima de las barras*/
+    align-items: center; /*Centra el texto sonbre la barra*/
+    justify-content: flex-end;/*Empueja el contenido hacia abajo*/
+}
+/*****CLASES ESPECIFICAS PARA CADA BARRA - ALTURA ANCHO Y COLOR********/
+.barra_dwec{
+    height: 60%; 
+    width: 50px;
+    background-color: #f10a31;
+}
+.barra_dwes{
+    height: 30%; 
+    width: 50px;
+    background-color: #2ec720;
+}
+.barra_diw{
+    height: 50%; 
+    width: 50px;
+    background-color: #faeb15;
+}
+.barra_proy{
+    height: 80%; 
+    width: 50px;
+    background-color: #5779d8;
+}
+/**LEYENDA**/
+/*Los 4 span en fila y centrados con separacion entre ellos*/
+.leyenda{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+/**/
+.leyenda span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/*Con ::before inserto un elemento vacio justo antes del contenido del span "Un div vacio" le doy ancho y alto para verse como un cuadrado*/
+.leyenda span::before {
+    content: ""; /*Sin esto el elemento no existe*/
+    display: inline-block;
+    width: 15px; /*Le doy ancho y alto al elemento*/
+    height: 15px;
+}
+/*Colores para las leyendas*/
+.leyenda_dwec::before { 
+    background-color: #f10a31; 
+}
+.leyenda_dwes::before { 
+    background-color: #2ec720; 
+}
+.leyenda_diw::before  { 
+    background-color: #faeb15; 
+}
+.leyenda_proy::before { 
+    background-color: #5779d8; 
+}
+
+/* Escalado
+mientras se pulsa el botón escalado, muestra el texto_escalado que está dentro del div hermano*/
+#ejercicio1 > .escalado:active ~ div .diagrama {
+    transform: scaleX(1.5);
+}
+
+#ejercicio1 > .escalado:active ~ div .texto_escalado {
+    display: block;
+}
+
+/*Desplazamiento*/
+#ejercicio1 > .desplazamiento:active ~ div .diagrama{
+    transform: translateX(-70px);
+}
+#ejercicio1 > .desplazamiento:active ~ div .texto_desplazamiento {
+    display: block;
+}
+
+/*Rotacion y desplazamiento*/
+#ejercicio1 > .rotacion_desplazamiento:active ~ div .diagrama{
+    transform: translateX(40px) rotate(-90deg);
+
+}
+#ejercicio1 > .rotacion_desplazamiento:active ~ div .texto_rotacion{
+    display: block;
+}

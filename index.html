@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 5 DIW</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/1_2-Trasformaciones.css">
+    <link rel="stylesheet" href="./css/1_3-Trasiciones.css">
+    <link rel="stylesheet" href="./css/1_4-Animaciones_CSS.css">
+    <!--María Fernandez Gilarte-->
+</head>
+<body>
+    <header>
+        <h2>Autor/a: María Fernández Gilarte</h2>
+        <img src="./imagenes/perfil.JPEG" alt="Foto de perfil" title="Foto perfil">
+    </header>
+    <main>
+        <nav>
+            <a href="#ejercicio1" class="enlace">CSS-TF</a>
+            <a href="#ejercicio2" class="enlace">CSS-TS</a>
+            <a href="#ejercicio3" class="enlace">CSS-AN</a>
+            <a href="#ejercicio4" class="enlace">Canvas</a>
+            <a href="#ejercicio5" class="enlace">SVG</a>
+        </nav>
+        <!--EJERCICIO 1-->
+        <div id="ejercicio1">
+            <h3>CSS-TF</h3>
+
+            <button class="escalado">Escalado</button>
+            <button class="desplazamiento">Desplazamiento</button>
+            <button class="rotacion_desplazamiento">Rotación y desplazamiento</button>
+
+            <!-- Contenedor principal -->
+            <div class="contenedor">
+                <div class="zona_texto">
+                    <p class="texto_escalado">transform: scaleX(1.5)</p>
+                    <p class="texto_desplazamiento">transform: translateX(-70px)</p>
+                    <p class="texto_rotacion">transform: translateX(40px) rotate(-90deg)</p>
+                </div>
+                <div class="diagrama">
+                    <div class="barra_grupo">
+                        <span>60%</span>
+                        <div class="barra_dwec"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>30%</span>
+                        <div class="barra_dwes"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>50%</span>
+                        <div class="barra_diw"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>80%</span>
+                        <div class="barra_proy"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="leyenda">
+                <span class="leyenda_dwec">DWEC</span>
+                <span class="leyenda_dwes">DWES</span>
+                <span class="leyenda_diw">DIW</span>
+                <span class="leyenda_proy">PROY</span>
+            </div>
+        </div>
+        <!--EJERCICIO 2-->
+        <div id="ejercicio2">
+            <h3>CSS-TS</h3>
+            <!-- Contenedor principal -->
+            <div class="contenedor">
+                <!--Barra completa-->
+                <div class="barra">
+                    <div class="barrita1">
+                        <span>30%</span>
+                    </div>
+                    <div class="barrita2">
+                        <span>15%</span>
+                    </div>
+                    <div class="barrita3">
+                        <span>25%</span>
+                    </div>
+                    <div class="barrita4">
+                        <span>40%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="leyenda">
+                <span class="leyenda_dwec">DWEC</span>
+                <span class="leyenda_dwes">DWES</span>
+                <span class="leyenda_diw">DIW</span>
+                <span class="leyenda_proy">PROY</span>
+            </div>
+        </div>
+        <!--EJERCICIO 3-->
+        <div id="ejercicio3">
+            <h3>CSS-AN</h3>
+            <!-- Contenedor principal -->
+            <div class="contenedor">
+                <div class="recuadro">Design: MFG</div>
+                <!--Diagrama de barras-->
+                <div class="diagrama">
+                    <div class="barra_grupo">
+                        <span>60%</span>
+                        <div class="barra_dwec"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>30%</span>
+                        <div class="barra_dwes"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>50%</span>
+                        <div class="barra_diw"></div>
+                    </div>
+                    <div class="barra_grupo">
+                        <span>80%</span>
+                        <div class="barra_proy"></div>
+                    </div>
+                </div>
+                <img class="icono" src="./imagenes/icono.png" alt="Icono estrella" title="Icono estrella">
+                <!--Diagrama de sectores-->
+                <div class="circulo"></div>               
+            </div>
+            <div class="leyenda">
+                <span class="leyenda_dwec">DWEC</span>
+                <span class="leyenda_dwes">DWES</span>
+                <span class="leyenda_diw">DIW</span>
+                <span class="leyenda_proy">PROY</span>
+                <button id="boton_reanudar">Reanudar</button>
+                <button id="boton_pausar">Pausar</button>
+            </div>
+        </div>
+        <!--Ejercicio 4-->
+        <div id="ejercicio4">
+            <h3>Canvas</h3>
+            <canvas id="miCanva" class="contenedor" width="650" height="400">
+                El navegador no lo soporta
+            </canvas>
+            <div class="leyenda">
+                <span class="leyenda_dwec">DWEC</span>
+                <span class="leyenda_dwes">DWES</span>
+                <span class="leyenda_diw">DIW</span>
+                <span class="leyenda_proy">PROY</span>
+                <button id="boton_iniciar">Iniciar</button>
+            </div>
+        </div>
+        <div id="ejercicio5">
+            <h3>SVG</h3>
+            <div class="contenedor">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="400">
+                    <!--Titulo-->
+                    <text x="280" y="50" font-family="Arial" font-size="25" text-anchor="middle" opacity="1">Diagrama de barras
+                        <!--
+                        Animacion texto: 
+                        - tipo de atributo al que le aplico la animacion (attributeType="CSS")
+                        - nombre del atributo al que le aplico la animacion (attributeName="opacity")
+                        - La animacion empieza desde 0 "transparente" (from="0") hasta que "ya aparece" (to="1")
+                        con una duracion de 3s y se queda como termina (fill="freeze")
+                        -->
+                        <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="3s" fill="freeze" />
+                    </text>    
+                    <!--
+                        Pintar las barras:
+                    Para calcular donde empieza el eje x, divido 600/4=150, por tanto la primero empezaria ahi.
+                    y la ultima terminaria en 450 para que asi sobrara 150 por cada lado. El resto se divide entre las 4 barras
+                    calculando que el ancho de cada una de ellas le he dejado 60.
+                    Para el eje y
+                    Para el alto de la barra:he hecho una regla de tres.. 
+                    100%----400
+                    80% ----- y, por tanto y = 320.
+                    Para calcular el eje y, le resto 400 (alto svg) - la altura de la barra
+                    -->
+                    <rect x="150" y="160" width="60" height="240" fill="#f10a31">
+                        <animate attributeName="y" from="400" to="160" dur="2s" fill="freeze"/>
+                    </rect>
+                    <!--En el caso del 30% lo tenia y=280 por el calculo pero lo retoque para que se viese mejor-->
+                    <rect x="220" y="250" width="60" height="120" fill="#2ec720">
+                         <animate attributeName="y" from="400" to="250" dur="2s" fill="freeze"/>
+                    </rect>    
+                    <rect x="290" y="200" width="60" height="200" fill="#faeb15">
+                        <animate attributeName="y" from="400" to="200" dur="2s" fill="freeze"/>
+                    </rect>
+                    <!--En el caso del 80% el eje y lo puse a 80 con el calculo pero visualmente no me gustaba y lo aumente-->
+                    <rect x="360" y="100" width="60" height="320" fill="#5779d8">
+                        <animate attributeName="y" from="400" to="100" dur="2s" fill="freeze"/>
+                        <!--Parpadeo de barra cuando termine la animacion de la bola
+                        Cuando termina la animacion de la bola begin="animacion1.end", la barra parpadea (opacity 0-1) cada segundo durante 4 segundos en total
+                        repeatDur=4s-->
+                        <animate attributeName="opacity" from="1" to="0" dur="1s" begin="animacion1.end" repeatDur="4s"/>
+                    </rect>
+                    <!--TRAYECTORIA DE LA BOLA
+                     fill=none y stroke= none para hacerlo "invisible"
+                     La ruta que sigue la bola la he calculado de la siguiente manera:
+                    La bola esta en (180,160). AnimateMotion suma las coordenadas del path a la posicion de la bola, por eso 
+                    pongo M0,0. Para mover la bola al siguiente punto utilizo coordenadas relativas l70,90 --Se mueve 70px en
+                    el eje x y 90px en el eje y--(x:250-180=70 y:250-160=90)
+                    l70,-50(x:320-250=70 y:200-250=-50) l70,-100(x:390-320=70 y:100-200=-100)
+                    -->
+                    <path id="trayectoria" d="M0,0 l70,90 l70,-50 l70,-100" fill="none" stroke="none"></path>
+                    <!--Circulo id="bola para luego con animateMotion hacer referencia. 
+                    "//atributo begin=2s para que aparezca cuando terminen las barras de subir-->
+                    <circle id="bola" cx=180 cy=160 r=10 stroke="black" stroke-width=2 fill="black" opacity="0">
+                        <animate attributeType="CSS" attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze"/>
+                        <!--Para que la bola se mueva.. etiqueta animateMotion begin -> Cuando click en la bola
+                        mpath->Hace referencia al path que anteriormente he puesto con id="trayectoria"
+                        -->
+                        <animateMotion id="animacion1" begin="bola.click" dur="3s" fill="freeze">
+                            <mpath xlink:href="#trayectoria"/>
+                        </animateMotion>
+                    </circle>
+                    <!--Lineas discontinuas
+                    Cada linea se conecta con el centro superior de la barra siguiente por tanto (60/2=30), a la x le sumo
+                    30 en cada linea y la y es igual que la de la barra que coincide
+                    -->
+                    <line x1="180" y1="160" x2="250" y2="250" stroke="black" stroke-width="1" stroke-dasharray="5,5" opacity="0">
+                        <animate attributeType="CSS" attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze"/>
+                    </line>
+                    <line x1="250" y1="250" x2="320" y2="200" stroke="black" stroke-width="1" stroke-dasharray="5,5" opacity="0">
+                        <animate attributeType="CSS" attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze"/>
+                    </line>
+                    <line x1="320" y1="200" x2="390" y2="100" stroke="black" stroke-width="1" stroke-dasharray="5,5"  opacity="0">
+                        <animate attributeType="CSS" attributeName="opacity" from="0" to="1" begin="2s" dur="1s" fill="freeze"/>
+                    </line>
+
+                </svg>
+            </div>
+            <div class="leyenda">
+                <span class="leyenda_dwec">DWEC (60%)</span>
+                <span class="leyenda_dwes">DWES (30%)</span>
+                <span class="leyenda_diw">DIW (50%)</span>
+                <span class="leyenda_proy">PROY (80%)</span>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>&copy; Copyright DIW</p>
+            <p>Diseñada por: María Fernández Gilarte</p>
+        </div>
+    </footer>
+    <script src="./js/1_4-Animaciones_CSS.js"></script>
+    <script src="./js/1_5-Animaciones_CANVAS.js"></script>
+</body>
+</html>

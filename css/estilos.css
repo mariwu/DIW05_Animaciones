@@ -1,0 +1,90 @@
+/*María Fernández Gilarte*/
+* { 
+    box-sizing: border-box;
+    margin: 0; /*Elimino margenes por defecto del navegador*/
+    padding: 0; /*Elimino paddings por defecto del navegador*/
+    text-align: center; /*Centro el texto de todos los elementos*/
+    text-decoration: none; /*Quito el subrayado por defecto de todos los enlaces*/
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    grid-area: cab; /*Ocupa el area "cab definida en el grid del body*/
+    display: flex;/*Activo flex para colocar los elementos en fila*/
+    flex-direction: row;
+    justify-content: space-around;/*Distribuye el espacio alrededor de los elementos*/
+    align-items: center;/*Centro los elementos verticalmente*/
+    border: 3px dotted black;
+}
+header img {
+    padding: 5px;
+    width: 7%;
+    border-radius: 50%;
+}
+body{
+    max-width: 1240px; /*Ancho maximo de la web*/
+    margin-left:auto;
+    margin-right:auto;
+    display:grid; /*Activo GRID*/
+    grid-template-columns: repeat(6, 1fr); /*6 columnas del mismo tamaño*/
+    /*Defino 5 filas: auto según contenido y las del medio ocupan el espacio sobrante (1fr) */
+    grid-template-rows: auto auto 1fr 1fr auto;/*filas auto(se ajusta al contenido- header,nav,footer) 1fr(ocupa el espacio sobrante-ejercicios)*/
+    grid-template-areas: /*Estructura*/
+        "cab cab cab cab cab cab"
+        "nav nav nav nav nav nav"
+        "ej1 ej1 ej2 ej2 ej3 ej3"
+        "ej4 ej4 ej4 ej5 ej5 ej5"
+        "pie pie pie pie pie pie";
+    gap: 15px;
+    padding: 20px;
+    
+}
+main {
+   /*Hace que el main desaparezca a efectos de layoud, haciendo que los div sean hijos directos del body*/ 
+  display: contents;
+}
+
+nav{
+    grid-area: nav;
+    gap: 50px;
+    display: flex;/*activo flex para colocar los enlaces en fila*/
+    padding: 15px;
+    justify-content: center;
+}
+/*Contenedor de la actividad*/
+.contenedor{
+    margin-top: 10px;
+    border:2px solid black;
+    height: 350px; /*altura fija para los contenedores*/
+    padding:10px 10px 0px 10px;
+    margin-bottom:10px;
+    display: flex;/*activo flex para organizar el contenido interno*/
+    flex-direction: column;/*los elementos internos se apilan en columnas*/
+    overflow: hidden; /*oculta cualquier contenido que se salga del contenedor*/
+}
+/* coger el foco */
+#ejercicio1:target .contenedor, 
+#ejercicio2:target .contenedor, 
+#ejercicio3:target .contenedor, 
+#ejercicio4:target .contenedor, 
+#ejercicio5:target .contenedor {
+    border-color: red;
+}
+#ejercicio1{
+    grid-area: ej1;
+}
+#ejercicio2{
+    grid-area: ej2;
+}
+#ejercicio3{
+    grid-area: ej3;
+}
+#ejercicio4{
+    grid-area: ej4;
+}
+#ejercicio5{
+    grid-area: ej5;
+}
+footer {
+    grid-area: pie;
+}
