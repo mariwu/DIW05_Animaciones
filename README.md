@@ -1,4 +1,4 @@
-# Tarea 5 - Diseño de Interfaces Web (DIW)
+# Animaciones
 
 Proyecto de clase desarrollado para el módulo de **Diseño de Interfaces Web** del ciclo formativo de Grado Superior en **Desarrollo de Aplicaciones Web (DAW)**.
 
